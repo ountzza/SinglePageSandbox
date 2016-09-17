@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var spinButton: UIButton!
     @IBOutlet weak var TitleLable: UILabel!
@@ -17,14 +17,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderLabel: UILabel!
     
     @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("this is loading")
-        textField.resignFirstResponder()
+//        self.textField.delegate = self
         
     }
-
+    /*
+    func makeKeyboardDisappear(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true;
+    }
+ */
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
